@@ -1,9 +1,7 @@
 name: Contact App Build
 
-on: 
-  pull_request:
+on: [push]
 
-  
 jobs:
   build:
 
