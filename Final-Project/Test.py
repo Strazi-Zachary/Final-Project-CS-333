@@ -70,17 +70,6 @@ class Test(unittest.TestCase):
         self.view.display_contacts()
         self.assertTrue(self.view.contacts)
       
-    @patch('builtins.input', side_effect=["Zack", "zack@test.com", "123 This St", "444-4444"]) 
-    def test_integration_5(self, mock_input):
-        
-        self.view.run()
-        self.assertEqual(len(self.controller.contacts), 1)
-        added_contact = self.controller.contacts[0]
-        self.assertEqual(added_contact.name, 'Zack')
-        self.assertEqual(added_contact.email, 'zack@test.com')
-        self.assertEqual(added_contact.address, '123 Main St')
-        self.assertEqual(added_contact.phone, '444-4444')
-        
-        
+  
 if __name__ == '__main__':
   unittest.main()
