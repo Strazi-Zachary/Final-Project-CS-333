@@ -8,27 +8,27 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python: ["3.8"]
+        python: ["3.9"]
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python ${{matrix.python-version}}
+      - name: Set up Python ${{matrix.python}}
         uses: actions/setup-python@v2
         with:
-          python-version: ${{matrix.python-version}}
+          python-version: ${{matrix.python}}
 
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
           pip install unittest coverage 
-          if [-f requirements.txt]; thrn pip install - r requirements.txt; fi
+          if [-f requirements.txt]; then pip install - r requirements.txt; fi
 
       - name: unittest
         run: |
           coverage run -m unittest Test_App.py
 
       - name: coverage
-        run: coverage html -d ${{matrix.python-version}}
+        run: coverage html -d ${{matrix.python}}
 
         
