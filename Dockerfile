@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . /app/
 
+ADD /mnt/c/Users/zstra/OneDrive/Documents/Cs 333/Final_Project_CS333/Final-Project-CS-333/Main.py
+
 ADD requirements.txt .
 
 RUN pip install -r requirements.txt
