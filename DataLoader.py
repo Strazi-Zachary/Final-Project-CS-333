@@ -5,7 +5,6 @@ from Contact import Contact
 class DataLoader():
     
     def save_contact(self, contacts): # Saves a contact after being added
-        
         try:
             with open("contacts.txt", "a") as f:
                 f.write(f"Name: {contacts.name}, Email: {contacts.email}, Address: {contacts.address}, Phone: {contacts.phone}\n")
@@ -15,7 +14,6 @@ class DataLoader():
  
             
     def save_all(self, contacts): # saves all contacts for removal
-        
         try:
             with open("contacts.txt", "w") as f:
                 for contact in contacts:
@@ -26,7 +24,6 @@ class DataLoader():
         
     def load_contacts(self): #Loads the contacts.txt file
         contacts = []
-        
         try:
             with open("contacts.txt", "r") as f:
                 for line in f:

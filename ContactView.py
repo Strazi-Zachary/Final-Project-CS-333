@@ -33,8 +33,11 @@ class ContactView():
     def display_contacts(self): # Displays all contacts
         dataLoader = DataLoader()
         self.contacts = dataLoader.load_contacts()
-        for contact in self.contacts:
-            print(contact)
+        if not self.contacts:
+            print("No Contacts are available")
+        else:
+            for contact in self.contacts:
+                print(contact)
     
     def run(self): # Runs the app
         
