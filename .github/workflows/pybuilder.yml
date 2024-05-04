@@ -49,4 +49,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/contactapp:demo
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/contactapp:demo2
