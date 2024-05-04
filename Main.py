@@ -3,7 +3,7 @@ from DataLoader import DataLoader
 from ContactView import ContactView
 from ContactController import ContactController
 
-
+#Demo
 def Main():
     
     model = Contact("", "", "", "")
